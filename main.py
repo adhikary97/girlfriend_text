@@ -15,6 +15,5 @@ def send_message():
             t.sleep(86400)
 
 
-
 if __name__ == '__main__':
     send_message()
