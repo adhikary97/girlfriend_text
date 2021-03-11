@@ -6,7 +6,7 @@ import util
 def send_message():
     while True:
         hour = datetime.datetime.now().strftime('%H')
-        if hour == '08':
+        if hour == util.scheduled_time:
             subprocess.call(f"bash runner.bash '{util.phone_number}' '{util.message}'", shell=True)
             time.sleep(86400)
 
