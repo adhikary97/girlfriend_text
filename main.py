@@ -1,13 +1,13 @@
 import datetime
 import subprocess
-import util
+import utils
 
 
 def send_message():
     while True:
         hour = datetime.datetime.now().strftime('%H')
-        if hour == util.scheduled_time:
-            subprocess.call(f"bash runner.bash '{util.phone_number}' '{util.message}'", shell=True)
+        if hour == utils.scheduled_time:
+            subprocess.call(f"bash runner.bash '{utils.phone_number}' '{utils.message}'", shell=True)
             time.sleep(86400)
 
 
