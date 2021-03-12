@@ -1,11 +1,12 @@
 import time
+import random
 import schedule
 import subprocess
 import utils
 
 
 def send_message():
-    subprocess.call("osascript message.applescript '%s' '%s'" % (f'{utils.phone_number}', f'{utils.message}'), shell=True)
+    subprocess.call("osascript message.applescript '%s' '%s'" % (f'{utils.phone_number}', f'{random.choice(utils.message)}'), shell=True)
 
 
 if __name__ == '__main__':
