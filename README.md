@@ -8,8 +8,7 @@ message = "Good Morning Babe" # just make sure the message is inside quotation m
 scheduled_time = "08:00" # make sure the hour has 2 digits (24-hour standard).
 ```
 
-Note that if you wish to send a message on a specific minute, you'll have to edit `main.py`.
-If you want to send a message everyday at 8:45 AM, you will need to set `scheduled_time = "08:45"` in `utils.py`
+Note: If you want to send a message everyday at 8:45 AM, you will need to set `scheduled_time = "08:45"` in `utils.py`
 
 ## 2. Install requirements: `pip install -r requirements.txt`
 
