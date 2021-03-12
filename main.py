@@ -1,15 +1,16 @@
-import datetime
+import time
+import schedule
 import subprocess
 import utils
 
 
 def send_message():
-    while True:
-        hour = datetime.datetime.now().strftime('%H')
-        if hour == utils.scheduled_time:
-            subprocess.call(f"bash runner.bash '{utils.phone_number}' '{utils.message}'", shell=True)
-            time.sleep(86400)
+    subprocess.call("osascript message.applescript '%s' '%s'" % (f'{utils.phone_number}', f'{utils.message}'), shell=True)
 
 
 if __name__ == '__main__':
-    send_message()
+    schedule.every().day.at(utils.scheduled_time).do(send_message)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
