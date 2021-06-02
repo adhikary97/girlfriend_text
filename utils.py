@@ -1,3 +1,3 @@
-phone_number = "phone number"
-message = ["Good morning babe", "Good morning my love", "Good morning cutie"]
-scheduled_time = "08:00"
+phone_number = "6154187890"
+message = ["cheese"]
+scheduled_time = "02:00"
